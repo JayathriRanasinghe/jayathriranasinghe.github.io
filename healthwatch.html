@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Healthwatch</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Project Recap</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="notification_system.html">Notification System</a></li>
+						<li><a href="elements.html"  class="active">Elements</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Health watch with emergency notifications</h1>
+
+							<!-- Text -->
+								<section>
+									<h2>Background:</h2>
+									<p>It is important to monitor our heart rate once a while. But for some of us it is good to keep monitor regularly. 
+									Specially <b>senior citizen.</b> Therefore we came up with the idea to build a <strong>wearable watch</strong>.
+									<a href="https://cepdnaclk.github.io/e18-3yp-Health-Watch-with-Emergency-Detection/">Click here to visit our project page</a>.</p>
+									<hr />
+								
+									<h3>Ronesh Sinha, M.D.(copied from an article SutterHealth)</h3>
+									<blockquote>
+
+										“I’ve noticed that my resting heart rate will be around 55 beats per minute when I first get up in the 
+										quiet early morning, but it will jump up into the 80s when I’m trying to get the kids to 
+										school on time. It’s a direct reminder for me throughout the day to slow down and breathe.”
+
+									</blockquote>
+									<h4>This above statement shows us how important to monitor the heart rate frequently.</h4>
+									
+								</section>
+								<hr />
+							<!-- Lists -->
+								<section>
+									<h2>Main areas of the system</h2>
+									<div class="row">
+										<div class="col-6 col-12-medium">
+											<h3>Hardware</h3>
+											<ul>
+												<li>Circuit with sensors</li>
+												<li>Outer Case</li>
+												<li>Charger</li>
+											</ul>
+											<h3>Software</h3>
+											<ul>
+												<li>Mobile app</li>
+											
+											</ul>
+											<h3>Network</h3>
+											<ul>
+												<li>IoT gateway to connect to the server</li>
+											</ul>
+											
+										</div>
+										
+									</div>
+									
+								</section>
+
+							<!-- Table -->
+								<section>
+									<h2>Components used in the device</h2>
+									<h3>Controller</h3>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Purpose</th>
+													
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>ATMEGA328P</td>
+													<td>as the microcontroller, then this is circuited up with clock, resistors and capacitors</td>
+													
+												</tr>
+												
+												
+											</tbody>
+											
+										</table>
+									</div>
+
+									<h3>Sensors</h3>
+									<div class="table-wrapper">
+										<table>
+											
+											<tbody>
+												<tr>
+													<td>MAX30100</td>
+													<td>To measure the heart rate and oxygen level of the blood</td>
+													
+												</tr>
+												<tr>
+													<td>LM35</td>
+													<td>To measure temperature</td>
+													
+												</tr>
+												
+											</tbody>
+											
+										</table>
+									</div>
+
+									<h3>Communication</h3>
+									<div class="table-wrapper">
+										<table>
+											
+											<tbody>
+												<tr>
+													<td>ESP8266 WiFi Module</td>
+													<td>Connect to the internet using WiFi</td>
+													
+												</tr>
+											</tbody>	
+										</table>
+									</div>
+									<h3>Power</h3>
+									<div class="table-wrapper">
+										<table>
+											
+											<tbody>
+												<tr>
+													<td>1000mah Li-Po battery</td>
+													<td>Get the required power supply for the circuit</td>
+													
+												</tr>
+												<tr>
+													<td>Micro USB 18650 Charging Board</td>
+													<td>Charge the rechargeable battery using usb cable</td>
+													
+												</tr>
+											</tbody>	
+										</table>
+									</div>
+
+
+									
+								</section>
+
+							<!-- Image -->
+								<section>
+									<h2>Image</h2>
+									<h3>Fit</h3>
+									<div class="box alt">
+										<div class="row gtr-uniform">
+											<div class="col-12"><span class="image fit"><img src="images/app_flash.png" alt="" /></span></div>
+											<div class="col-3"><span class="image fit"><img src="images/3d_print.jpg" alt="" /></span></div>
+											<div class="col-3"><span class="image fit"><img src="images/testing.jpg" alt="" /></span></div>
+											<div class="col-3"><span class="image fit"><img src="images/charging_final.jpeg" alt="" /></span></div>
+											<div class="col-3"><span class="image fit"><img src="images/final_product.png" alt="" /></span></div>
+											<div class="col-12"><span class="image fit"><img src="images/app_overview.png" alt="" /></span></div>
+											
+										</div>
+									</div>
+									<h3>Our experience through out the project</h3>
+									<p>First of all this was a novel experience to us since this was not just a part of some system but full hardware software system. Software that view the received data, sensors which read the data, MC that controlls all the events, seperate wifi module which sends the data to the cloud and an Azure server which keeps our backend on. Alltogether this is the most amazing project that we have build so far. Why I mentioned this is amazing is because at the end of all the hardwork we have learn a lot more in this project. This was the first time we did flutter application. This was the first time we deployed an application to a cloud server. Therefore this journey was not that easy. With all the errors that we faced time to time we could learn a lot through finding solutions to these errors.</p>
+									<p><span class="image right"><img src="images/3d_model.png" alt="" /></span>From designing the model for the casing and finshing with proper documentation was a complete procedure to put a product to the market. That was the main reason this project was such a brilliant opportunity to us to gain more knowledge and become so much than just developing a software or hardware circuit.<br><br> Overall it was a great experience.<br></p>
+								</section>
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; jaya3Ranasinghe. All rights reserved.</li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		
+
+	</body>
+</html>
