@@ -3210,6 +3210,33 @@ input, select, textarea {
 			max-width: 100%;
 			width: 75em;
 		}
+			.wrapper > .inner > .inner-hi {
+				float: right;
+			}
+
+			.wrapper > .inner > .inner-hi h1 {
+				font-size: 80px;
+				margin-top: 5px;
+				margin-bottom: 10px;
+			}
+
+			.wrapper > .inner > .inner-hi h2 {
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+				font-size: 70px;
+				font-weight: 10;
+				margin-bottom: 10px;
+			}
+
+
+			.wrapper > .inner > .inner-hi h3 {
+				
+				font-size: 20px;
+				font-weight: normal;
+			}
+			.wrapper > .inner > .inner-hi > .actions li a {
+				
+				
+			}
 
 			@media screen and (max-width: 1680px) {
 
@@ -3240,7 +3267,8 @@ input, select, textarea {
 		}
 
 		.wrapper.style1 {
-			background-color: #052746;
+			/* background-color: #052746; */
+			background-image: url("/images/puple.jpg");
 		}
 
 		.wrapper.style1-alt {
@@ -3874,7 +3902,7 @@ input, select, textarea {
 
 	#intro {
 		background-attachment: fixed;
-		background-image: url("https://drive.google.com/file/d/1Trg4WpBPf9DOAvYOaxCD55LjhT2ny9vS/view?usp=share_link");
+		background-image: url("/images/puple.jpg");
 		background-position: top right;
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
