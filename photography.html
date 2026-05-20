@@ -1,170 +1,462 @@
 <!DOCTYPE html>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-  <head>
-    <title>Photography - My Interests</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript
-      ><link rel="stylesheet" href="assets/css/noscript.css"
-    /></noscript>
-  </head>
-  <body class="is-preload">
-    <!-- Header -->
-    <header id="header">
-      <a href="index.html" class="title">Interests</a>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="photography.html" class="active">Photography</a></li>
-        </ul>
-      </nav>
-    </header>
+<html lang="en">
+<head>
+  <title>Photography — Jayathri Ranasinghe</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+  <link rel="stylesheet" href="assets/css/portfolio.css" />
+  <style>
+    /* ── Page hero ─────────────────────────────── */
+    #photo-hero {
+      padding: calc(var(--nav-h) + 5rem) 2rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    #photo-hero .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 60%, rgba(145, 94, 255, 0.15) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 30%, rgba(0, 212, 255, 0.1)  0%, transparent 50%);
+      pointer-events: none;
+    }
+    #photo-hero .inner {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    #photo-hero h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, #ffffff 30%, var(--purple) 70%, var(--cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+    }
+    #photo-hero p {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+    #photo-hero .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--cyan);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      transition: gap 0.2s, color 0.2s;
+    }
+    #photo-hero .back-link:hover { color: var(--text); gap: 0.75rem; }
 
-    <!-- Wrapper -->
-    <div id="wrapper">
-      <!-- Main -->
-      <section id="main" class="wrapper">
-        <div class="inner">
-          <h1 class="major">My photography experiments</h1>
-          <span class="image fit"
-            ><img src="images/photography/landscape.png" alt=""
-          /></span>
-          <p>
-            It was one of my passion that always had with me to capture things
-            around me and turn it into some artistic clicks. Then as the next
-            step of this passion is getting a DSLR camera and study and
-            experiment with photography since it is not just pressing the
-            shutter button. It was about the angles, lights, expressions,
-            movements around you.
-          </p>
-          <p>
-            Without going to the auto mode in the camera, the best thing is
-            experimenting with the manual mode. Shutter speed, Aparture, ISO
-            value can create amazing clicks. Following photos are some of my
-            experiment results.
-          </p>
+    /* ── Gallery sections ────────────────────────── */
+    .gallery-section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem 5rem;
+    }
 
-          <!-- Image -->
-          <section id="main" class="wrapper">
-            <h2>Few Clicks</h2>
-            <h3>From eye to the lens</h3>
-            <div class="box alt">
-              <div class="row gtr-uniform">
-                <div class="col-12">
-                  <span class="image fit"
-                    ><img
-                      src="images/photography/boganwila_and_rain.png"
-                      alt=""
-                  /></span>
-                </div>
-                <div class="col-4">
-                  <span class="image fit"
-                    ><img src="images/photography/book_on_grass.png" alt=""
-                  /></span>
-                </div>
-                <div class="col-4">
-                  <span class="image fit"
-                    ><img src="images/photography/couple_in_sunset.png" alt=""
-                  /></span>
-                </div>
-                <div class="col-4">
-                  <span class="image fit"
-                    ><img src="images/photography/sea_and_sunset.png" alt=""
-                  /></span>
-                </div>
-                <div class="col-3">
-                  <span class="image fit"
-                    ><img src="images/photography/into_the_wild_1.png" alt=""
-                  /></span>
-                </div>
-                <div class="col-3">
-                  <span class="image fit"
-                    ><img
-                      src="images/photography/small_grass_flowers.png"
-                      alt=""
-                  /></span>
-                </div>
-                <div class="col-3">
-                  <span class="image fit"
-                    ><img
-                      src="images/photography/kandy_dancer_flowers.png"
-                      alt=""
-                  /></span>
-                </div>
-                <div class="col-3">
-                  <span class="image fit"
-                    ><img src="images/photography/puple_flowers.png" alt=""
-                  /></span>
-                </div>
-              </div>
-            </div>
+    .gallery-heading {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+    }
+    .gallery-heading h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .gallery-heading p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin: 0;
+    }
+    .gallery-divider {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, rgba(145,94,255,0.4), transparent);
+      border-radius: 1px;
+    }
 
-            <h3>Black and white mode</h3>
-            <div class="box alt">
-              <div class="row gtr-uniform">
-                <div class="col-12">
-                  <span class="image fit"
-                    ><img src="images/photography/landscape_book.png" alt=""
-                  /></span>
-                </div>
-                <div class="col-6">
-                  <span class="image fit"
-                    ><img src="images/photography/father_and_son.png" alt=""
-                  /></span>
-                </div>
-                <div class="col-6">
-                  <span class="image fit"
-                    ><img src="images/photography/sea_and_beach.png" alt=""
-                  /></span>
-                </div>
-              </div>
-            </div>
+    /* ── Grid layouts ───────────────────────────── */
+    .gallery-grid {
+      display: grid;
+      gap: 10px;
+    }
 
-            <h3>Twinkle Twinkle little stars</h3>
-            <div class="box alt">
-              <div class="row gtr-uniform">
-                <div class="col-6">
-                  <span class="image fit"
-                    ><img src="images/photography/night_sky_I.png" alt=""
-                  /></span>
-                </div>
-                <div class="col-6">
-                  <span class="image fit"
-                    ><img src="images/photography/night_sky_II.png" alt=""
-                  /></span>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-      </section>
+    /* Layout A: 1 full + 3 below + 4 below */
+    .layout-a .row-full   { grid-template-columns: 1fr; }
+    .layout-a .row-thirds { grid-template-columns: repeat(3, 1fr); }
+    .layout-a .row-quart  { grid-template-columns: repeat(4, 1fr); }
+
+    /* Layout B: 1 full + 2 halves */
+    .layout-b .row-full   { grid-template-columns: 1fr; }
+    .layout-b .row-halves { grid-template-columns: repeat(2, 1fr); }
+
+    /* Layout C: 2 halves */
+    .layout-c { grid-template-columns: repeat(2, 1fr); }
+
+    .grid-row {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .grid-row:last-child { margin-bottom: 0; }
+
+    /* ── Individual photo cell ───────────────────── */
+    .photo-cell {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      cursor: pointer;
+      background: rgba(13, 18, 50, 0.6);
+      aspect-ratio: 4/3;
+    }
+    .photo-cell.wide   { aspect-ratio: 16/7; }
+    .photo-cell.tall   { aspect-ratio: 3/4; }
+    .photo-cell.square { aspect-ratio: 1/1; }
+
+    .photo-cell img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease, filter 0.4s ease;
+      filter: brightness(0.92);
+    }
+    .photo-cell:hover img {
+      transform: scale(1.06);
+      filter: brightness(1.05);
+    }
+
+    .photo-cell .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(5, 8, 22, 0.7) 0%,
+        transparent 50%
+      );
+      opacity: 0;
+      transition: opacity 0.35s;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 1rem;
+    }
+    .photo-cell:hover .overlay { opacity: 1; }
+    .overlay .zoom-icon {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: rgba(145, 94, 255, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 0.85rem;
+    }
+
+    /* ── Lightbox ───────────────────────────────── */
+    #lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9000;
+      background: rgba(5, 8, 22, 0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    #lightbox.open { display: flex; }
+
+    #lightbox img {
+      max-width: 92vw;
+      max-height: 88vh;
+      object-fit: contain;
+      border-radius: 10px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.7);
+      display: block;
+    }
+
+    #lb-close {
+      position: fixed;
+      top: 1.25rem; right: 1.5rem;
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: rgba(145, 94, 255, 0.2);
+      border: 1px solid rgba(145,94,255,0.4);
+      color: var(--text);
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s;
+      z-index: 9001;
+    }
+    #lb-close:hover { background: rgba(145,94,255,0.4); }
+
+    #lb-prev, #lb-next {
+      position: fixed;
+      top: 50%; transform: translateY(-50%);
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: rgba(145, 94, 255, 0.2);
+      border: 1px solid rgba(145,94,255,0.4);
+      color: var(--text);
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s;
+      z-index: 9001;
+    }
+    #lb-prev { left: 1rem; }
+    #lb-next { right: 1rem; }
+    #lb-prev:hover, #lb-next:hover { background: rgba(145,94,255,0.4); }
+
+    #lb-counter {
+      position: fixed;
+      bottom: 1.5rem; left: 50%; transform: translateX(-50%);
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      z-index: 9001;
+    }
+
+    /* ── Responsive ─────────────────────────────── */
+    @media (max-width: 768px) {
+      .grid-row.row-thirds,
+      .grid-row.row-quart  { grid-template-columns: repeat(2, 1fr); }
+      .grid-row.row-halves { grid-template-columns: 1fr; }
+      .layout-c            { grid-template-columns: 1fr; }
+      .photo-cell.wide     { aspect-ratio: 16/9; }
+    }
+    @media (max-width: 480px) {
+      .grid-row.row-thirds,
+      .grid-row.row-quart  { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Nav ──────────────────────────────────── -->
+  <nav id="topnav">
+    <a href="index.html" class="nav-logo">JR</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#interests">Interests</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="index.html"            onclick="closeMobile()">Home</a>
+    <a href="index.html#interests"  onclick="closeMobile()">Interests</a>
+    <a href="index.html#contact"    onclick="closeMobile()">Contact</a>
+  </div>
+
+  <!-- ── Hero ─────────────────────────────────── -->
+  <section id="photo-hero">
+    <div class="hero-bg"></div>
+    <div class="inner">
+      <a href="index.html#interests" class="back-link">
+        <i class="fas fa-arrow-left"></i> Back to Portfolio
+      </a>
+      <h1>My Photography</h1>
+      <p>
+        It started as a passion to capture the world around me and turn it into
+        artistic clicks. Getting a DSLR meant learning that photography is more
+        than pressing the shutter — it's about angles, light, expressions, and the
+        movements around you. These are experiments with manual mode: shutter
+        speed, aperture, and ISO working together.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── Section 1: From eye to the lens ─────── -->
+  <div class="gallery-section">
+    <div class="gallery-heading">
+      <div>
+        <h2>From Eye to the Lens</h2>
+        <p>Colour photography experiments</p>
+      </div>
+      <div class="gallery-divider"></div>
     </div>
 
-    <!-- Footer -->
-    <footer id="footer" class="wrapper alt">
-      <div class="inner">
-        <ul class="menu">
-          <li>&copy; jaya3Ranasinghe. All rights reserved.</li>
-        </ul>
+    <!-- Hero shot -->
+    <div class="grid-row row-full">
+      <div class="photo-cell wide" data-src="images/photography/boganwila_and_rain.png">
+        <img src="images/photography/boganwila_and_rain.png" alt="Boganwila and rain" loading="lazy" />
+        <div class="overlay"><span class="zoom-icon"><i class="fas fa-expand"></i></span></div>
       </div>
-    </footer>
+    </div>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
+    <!-- 3-column row -->
+    <div class="grid-row row-thirds">
+      <div class="photo-cell" data-src="images/photography/book_on_grass.png">
+        <img src="images/photography/book_on_grass.png" alt="Book on grass" loading="lazy" />
+        <div class="overlay"><span class="zoom-icon"><i class="fas fa-expand"></i></span></div>
+      </div>
+      <div class="photo-cell" data-src="images/photography/couple_in_sunset.png">
+        <img src="images/photography/couple_in_sunset.png" alt="Couple in sunset" loading="lazy" />
+        <div class="overlay"><span class="zoom-icon"><i class="fas fa-expand"></i></span></div>
+      </div>
+      <div class="photo-cell" data-src="images/photography/sea_and_sunset.png">
+        <img src="images/photography/sea_and_sunset.png" alt="Sea and sunset" loading="lazy" />
+        <div class="overlay"><span class="zoom-icon"><i class="fas fa-expand"></i></span></div>
+      </div>
+    </div>
+
+    <!-- 4-column row -->
+    <div class="grid-row row-quart">
+      <div class="photo-cell square" data-src="images/photography/into_the_wild_1.png">
+        <img src="images/photography/into_the_wild_1.png" alt="Into the wild" loading="lazy" />
+        <div class="overlay"><span class="zoom-icon"><i class="fas fa-expand"></i></span></div>
+      </div>
+      <div class="photo-cell square" data-src="images/photography/small_grass_flowers.png">
+        <img src="images/photography/small_grass_flowers.png" alt="Small grass flowers" loading="lazy" />
+        <div class="overlay"><span class="zoom-icon"><i class="fas fa-expand"></i></span></div>
+      </div>
+      <div class="photo-cell square" data-src="images/photography/kandy_dancer_flowers.png">
+        <img src="images/photography/kandy_dancer_flowers.png" alt="Kandy dancer flowers" loading="lazy" />
+        <div class="overlay"><span class="zoom-icon"><i class="fas fa-expand"></i></span></div>
+      </div>
+      <div class="photo-cell square" data-src="images/photography/puple_flowers.png">
+        <img src="images/photography/puple_flowers.png" alt="Purple flowers" loading="lazy" />
+        <div class="overlay"><span class="zoom-icon"><i class="fas fa-expand"></i></span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Section 2: Black & White ────────────── -->
+  <div class="gallery-section" style="padding-top:1rem;">
+    <div class="gallery-heading">
+      <div>
+        <h2>Black &amp; White Mode</h2>
+        <p>Stripping colour to reveal form and mood</p>
+      </div>
+      <div class="gallery-divider"></div>
+    </div>
+
+    <div class="grid-row row-full">
+      <div class="photo-cell wide" data-src="images/photography/landscape_book.png">
+        <img src="images/photography/landscape_book.png" alt="Landscape book" loading="lazy" />
+        <div class="overlay"><span class="zoom-icon"><i class="fas fa-expand"></i></span></div>
+      </div>
+    </div>
+
+    <div class="grid-row row-halves">
+      <div class="photo-cell" data-src="images/photography/father_and_son.png">
+        <img src="images/photography/father_and_son.png" alt="Father and son" loading="lazy" />
+        <div class="overlay"><span class="zoom-icon"><i class="fas fa-expand"></i></span></div>
+      </div>
+      <div class="photo-cell" data-src="images/photography/sea_and_beach.png">
+        <img src="images/photography/sea_and_beach.png" alt="Sea and beach" loading="lazy" />
+        <div class="overlay"><span class="zoom-icon"><i class="fas fa-expand"></i></span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Section 3: Night sky ──────────────────── -->
+  <div class="gallery-section" style="padding-top:1rem;">
+    <div class="gallery-heading">
+      <div>
+        <h2>Twinkle Twinkle Little Stars</h2>
+        <p>Long-exposure night sky captures</p>
+      </div>
+      <div class="gallery-divider"></div>
+    </div>
+
+    <div class="gallery-grid layout-c">
+      <div class="photo-cell" style="aspect-ratio:4/3;" data-src="images/photography/night_sky_I.png">
+        <img src="images/photography/night_sky_I.png" alt="Night sky I" loading="lazy" />
+        <div class="overlay"><span class="zoom-icon"><i class="fas fa-expand"></i></span></div>
+      </div>
+      <div class="photo-cell" style="aspect-ratio:4/3;" data-src="images/photography/night_sky_II.png">
+        <img src="images/photography/night_sky_II.png" alt="Night sky II" loading="lazy" />
+        <div class="overlay"><span class="zoom-icon"><i class="fas fa-expand"></i></span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Footer ─────────────────────────────── -->
+  <footer id="footer" style="margin-top:2rem;">
+    &copy; Jayathri Ranasinghe. All rights reserved.
+  </footer>
+
+  <!-- ── Lightbox ───────────────────────────── -->
+  <div id="lightbox">
+    <button id="lb-close" aria-label="Close"><i class="fas fa-times"></i></button>
+    <button id="lb-prev"  aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+    <img id="lb-img" src="" alt="Full size photo" />
+    <button id="lb-next"  aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+    <div id="lb-counter"></div>
+  </div>
+
+  <script>
+    /* Mobile nav */
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('nav-mobile').classList.toggle('open');
+    });
+    function closeMobile() { document.getElementById('nav-mobile').classList.remove('open'); }
+
+    /* Lightbox */
+    const cells = Array.from(document.querySelectorAll('.photo-cell'));
+    const srcs  = cells.map(c => c.dataset.src);
+    const lb    = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lb-img');
+    const lbCtr = document.getElementById('lb-counter');
+    let cur = 0;
+
+    function openLb(idx) {
+      cur = idx;
+      lbImg.src = srcs[cur];
+      lbCtr.textContent = `${cur + 1} / ${srcs.length}`;
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLb() {
+      lb.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function showNext() { openLb((cur + 1) % srcs.length); }
+    function showPrev() { openLb((cur - 1 + srcs.length) % srcs.length); }
+
+    cells.forEach((c, i) => c.addEventListener('click', () => openLb(i)));
+    document.getElementById('lb-close').addEventListener('click', closeLb);
+    document.getElementById('lb-next').addEventListener('click', showNext);
+    document.getElementById('lb-prev').addEventListener('click', showPrev);
+    lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+    document.addEventListener('keydown', e => {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'Escape')     closeLb();
+      if (e.key === 'ArrowRight') showNext();
+      if (e.key === 'ArrowLeft')  showPrev();
+    });
+
+    /* Scroll reveal */
+    const revEls = document.querySelectorAll('.reveal');
+    new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 }).observe(...(revEls.length ? revEls : [document.body]));
+  </script>
+
+</body>
 </html>

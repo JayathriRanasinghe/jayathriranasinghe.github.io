@@ -1,516 +1,534 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Jayathri Ranasinghe</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+  <link rel="stylesheet" href="assets/css/portfolio.css" />
+</head>
+<body>
 
-<html>
-  <head>
-    <title>Jayathri Ranasinghe</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript
-      ><link rel="stylesheet" href="assets/css/noscript.css"
-    /></noscript>
-  </head>
-  <body class="is-preload">
-    <!-- Sidebar -->
-    <section id="sidebar">
-      <div class="inner">
-        <nav>
-          <ul>
-            <li><a href="#intro">Welcome</a></li>
-            <li><a href="#two">Work Experience</a></li>
-            <li><a href="#three">My projects</a></li>
-            <li><a href="#four">My interests</a></li>
-            <li><a href="#five" target="_blank">My Personal Blog</a></li>
-            <li><a href="#six">Get in touch</a></li>
-          </ul>
-        </nav>
+  <!-- ── Navigation ─────────────────────────────── -->
+  <nav id="topnav">
+    <a href="#hero" class="nav-logo">JR</a>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#interests">Interests</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Menu" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="#hero"       onclick="closeMobile()">Home</a>
+    <a href="#experience" onclick="closeMobile()">Experience</a>
+    <a href="#projects"   onclick="closeMobile()">Projects</a>
+    <a href="#interests"  onclick="closeMobile()">Interests</a>
+    <a href="#blog"       onclick="closeMobile()">Blog</a>
+    <a href="#contact"    onclick="closeMobile()">Contact</a>
+  </div>
+
+  <!-- ── Hero ───────────────────────────────────── -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <canvas id="particles-canvas"></canvas>
+
+    <div class="hero-inner">
+      <div class="profile-ring-wrap">
+        <img src="images/profilePic.png" alt="Jayathri Ranasinghe" class="profile-pic" />
       </div>
-    </section>
 
-    <!-- Wrapper -->
-    <div id="wrapper">
-      <!-- Intro -->
+      <span class="hero-badge">Open to opportunities</span>
+      <p class="hero-greeting">Hi there, I am</p>
+      <h1 class="hero-name">Jayathri Ranasinghe</h1>
+      <p class="hero-subtitle">
+        <strong>Computer Engineering Undergraduate</strong><br>
+        ML &amp; Full-Stack Enthusiast · Photographer at heart
+      </p>
 
-      <section id="intro" class="wrapper style1 fullscreen fade-up">
-        <div class="inner">
-          <img
-            src="images/profilePic.png"
-            alt="my_profile_picture"
-            style="width: 250px; height: 250px"
-          />
-          <div class="inner-hi">
-            <h2>Hi, I am</h2>
-            <h1>
-              <font face="Eras Medium ITC">Jayathri Ranasinghe</font>
-            </h1>
-
-            <h3>Computer Engineering Undergraduate</h3>
-          </div>
-        </div>
-      </section>
-
-      <!-- Two -->
-      <section id="two" class="wrapper style4-alt fade-up">
-        <div class="inner">
-          <h2>Industry Experience</h2>
-          <div class="">
-            <section>
-              <h3 style="text-align: left">
-                Software Engineering Intern - ML/AI @Unicorn-Solutions (Pvt) Ltd
-                <span style="float: right">March 2024 - Present</span>
-              </h3>
-
-              <ul>
-                <li>
-                  Machine Learning Project
-                  <br />Contribution:
-                  <ul>
-                    <li>Data preprocessing: feature engineering, encoding</li>
-                    <li>Training models: working with traditional models</li>
-                    <li>Fine tuning and model evaluation</li>
-                    <i
-                      ><b>Technologies:</b>
-                      Python and Build-in libraries for ML
-                      <br /><b>Tools:</b> Git | BitBucket | JIRA | Confluence</i
-                    >
-                  </ul>
-                </li>
-              </ul>
-            </section>
-            <section>
-              <h3 style="text-align: left">
-                Software Engineering Intern @Unicorn-Solutions (Pvt) Ltd
-                <span style="float: right">July 2023 - Dec 2023</span>
-              </h3>
-
-              <ul>
-                <li>
-                  QuickIn: Human Resource Management System
-                  <br />Contribution:
-                  <ul>
-                    <li>Worked on bugfixes (mostly backend)</li>
-                    <li>Developer testing for first production release</li>
-                    <li>
-                      Fully developed the Admin Panel frontend for the system
-                    </li>
-                    <li>Azure dev environment releases</li>
-                    <i
-                      ><b>Technologies:</b>
-                      React.js with Redux.js | .NET with minimal API | MongoDB |
-                      Azure
-                      <br /><b>Tools:</b> Git | BitBucket | JIRA | Confluence</i
-                    >
-                  </ul>
-                </li>
-                <li>
-                  Machine Learning Project
-                  <br />Contribution:
-                  <ul>
-                    <li>Data preprocessing</li>
-                    <li>Training models</li>
-                    <li>Fine tuning and model evaluation</li>
-
-                    <i
-                      ><b>Technologies:</b>
-                      Python and Build-in libraries for ML
-                      <br /><b>Tools:</b> Git | BitBucket | JIRA | Confluence</i
-                    >
-                  </ul>
-                </li>
-              </ul>
-            </section>
-          </div>
-        </div>
-      </section>
-      <!-- three-->
-      <section id="three" class="wrapper style3 fade-up">
-        <div class="inner">
-          <h2>My Ongoing projects</h2>
-          <p>Currently I am working on following projects</p>
-          <i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
-          <p></p>
-          <!-- <p>(Sorry. This section will be updated in few days)</p> -->
-          <div class="features">
-            <section>
-              <span class="icon solid major fa-search"></span>
-              <h3>
-                Research Project: Long reads binning and classification | Group
-              </h3>
-              <p>
-                Studying the domain DNA, how binning and classifications are
-                done so far and already built python tools.
-              </p>
-              <ul class="actions">
-                <li>
-                  <a
-                    href="https://cepdnaclk.github.io/e18-4yp-Multi-Kingdom-Binning-of-Long-Read-Metagenomes/"
-                    target="_blank"
-                    class="button"
-                    >Read more</a
-                  >
-                </li>
-              </ul>
-            </section>
-            <section>
-              <span class="icon solid major fa-user-md"></span>
-              <h3>System for Social Service Association | Individual</h3>
-              <p>
-                This is for an Association which does welfare works such as
-                extending financial assistance and supporting member families
-                with labour at funeral occasions welfare works of the area.<br /><br />
-                Financial Management, Inventory Management and User Management.
-              </p>
-              Tools:
-              <ul>
-                <li>For frontend: React(TypeScript) with Redux-Saga</li>
-                <li>For backend: Spring Boot Framework</li>
-                <li>For database: MySQL</li>
-              </ul>
-            </section>
-            <!-- <section>
-              <span class="icon solid major fa-user-md"></span>
-              <h3>Dental Patient Management System | Group</h3>
-              <p>
-                Building a system to make it easier to keep the records of the
-                patients of dental clinic while they are examined by medical
-                officer. <br /><br />Volunteer based project for Faculty of
-                Dental Science, University of Peradeniya
-              </p>
-              Tools:
-              <ul>
-                <li>Laravel</li>
-                <li>PHP</li>
-                <li>MySQL</li>
-              </ul>
-            </section> -->
-          </div>
-        </div>
-
-        <div class="inner">
-          <h2>Completed Projects</h2>
-          <p>
-            I had several opportunities in order to get hands on experience in
-            many projects with different technologies
-          </p>
-          <div class="features">
-            <section>
-              <span class="icon solid major fa-leaf"></span>
-              <h3>
-                ML for Analyzing Egg Hatching
-                <span style="float: right">| Group</span>
-              </h3>
-              <p>
-                Building a Machine Learning model to predict the number of
-                hatching eggs before the eggs are sent to the incubator. Also,
-                we are predicting the methods that rejected eggs can be reduced
-                in the farms in order to increase the profit of the farm.
-              </p>
-              Tools:
-              <ul>
-                <li>Python</li>
-                <li>Google Colab</li>
-                <li>React.js</li>
-                <li>Node.js</li>
-                <li>MongoDB</li>
-                <li>Git, Github</li>
-              </ul>
-              <ul class="actions">
-                <li>
-                  <a
-                    href="https://github.com/cepdnaclk/e18-6sp-ML-for-Analyzing-Egg-Hatching"
-                    target="_blank"
-                    class="button"
-                    >Read more</a
-                  >
-                </li>
-              </ul>
-            </section>
-            <section>
-              <span class="icon solid major fa-heartbeat"></span>
-              <h3>
-                Health watch with emergency notifications
-                <span style="float: right">| Group</span>
-              </h3>
-              <p>
-                This was a complete software hardware system. The IoT device
-                that we have developed is a wearable on hand wrist.
-              </p>
-              Tools:
-              <ul>
-                <li>Flutter with Dart</li>
-                <li>Node.js</li>
-                <li>Azure services</li>
-                <li>MongoDB</li>
-                <li>Git, Github</li>
-                <li>For hardware: Arduino</li>
-              </ul>
-              <ul class="actions">
-                <li>
-                  <a href="healthwatch.html" target="_blank" class="button"
-                    >Read more</a
-                  >
-                </li>
-              </ul>
-            </section>
-            <section>
-              <span class="icon solid major fa-envelope"></span>
-              <h3>
-                Automated Notification System for Examinations
-                <span style="float: right">| Group</span>
-              </h3>
-              <p>
-                An Automated Notification System that can send reminders
-                automatically to the lecturers who are assigned to examination
-                duties, Due dates will be checked before like 3 days(this can be
-                changed according to the department requirement). Emails and
-                Discord messages will be send through the system.
-              </p>
-              Tools:
-              <ul>
-                <li>Python</li>
-                <li>Google Cloud Services</li>
-                <li>Gmail</li>
-                <li>Discord</li>
-              </ul>
-              <ul class="actions">
-                <li>
-                  <a
-                    href="https://cepdnaclk.github.io/e18-co227-Automated-Notification-System-for-Examinations/"
-                    target="_blank"
-                    class="button"
-                    >Read more</a
-                  >
-                </li>
-              </ul>
-            </section>
-            <section>
-              <span class="icon solid major fa-comments"></span>
-              <h3>
-                Bluetooth Chat Application
-                <span style="float: right">| Group</span>
-              </h3>
-              <p>
-                Developed a mobile application which can send and receive text
-                message with nearby devices using bluetooth
-              </p>
-              Tools:
-              <ul>
-                <li>Java</li>
-                <li>Android Studio</li>
-                <li>Git, Github</li>
-              </ul>
-              <ul class="actions">
-                <li>
-                  <a
-                    href="https://github.com/NethmiRanasinghe/CO225-project-group10"
-                    target="_blank"
-                    class="button"
-                    >Visit Git Repo</a
-                  >
-                </li>
-              </ul>
-            </section>
-          </div>
-        </div>
-
-        <div class="inner">
-          <h2>Indivitual Projects</h2>
-          <p>Releases of the apps can be found in Git Repos</p>
-
-          <p></p>
-          <!-- <p>(Sorry. This section will be updated in few days)</p> -->
-          <div class="features">
-            <section>
-              <span class="icon solid major fa fa-edit"></span>
-              <h3>Invitation Namer</h3>
-              <p>
-                With load of tools available online, you can create an eligent
-                invitation for your function But how can you edit that again
-                again to all of your guest list.
-              </p>
-              <p>It is not that hard!</p>
-              <p>
-                Set up your invitation & guest list and download the latest
-                version of software to your PC according to the OS. Then follow
-                the user guide given and update the invitation and the guest
-                list.
-              </p>
-              Tools:
-              <ul>
-                <li>Python</li>
-                <li>MS Excel Sheets</li>
-              </ul>
-              <ul class="actions">
-                <li>
-                  <a
-                    href="https://github.com/JayathriRanasinghe/Invitation_Namer"
-                    target="_blank"
-                    class="button"
-                    >Visit Git Repo</a
-                  >
-                </li>
-              </ul>
-            </section>
-
-            <section>
-              <span class="icon solid major fa-check"></span>
-              <h3>ToDo App</h3>
-              <p>
-                Manage your daily tasks and deadlines with reminders. This is a
-                simple android application which is build using Flutter and full
-                functionality can be handled offline and in the local storage of
-                your mobile.
-              </p>
-              Tools:
-              <ul>
-                <li>Flutter</li>
-              </ul>
-              <ul class="actions">
-                <li>
-                  <a
-                    href="https://github.com/JayathriRanasinghe/ToDo-Application"
-                    target="_blank"
-                    class="button"
-                    >Visit Git Repo</a
-                  >
-                </li>
-              </ul>
-            </section>
-          </div>
-        </div>
-      </section>
-
-      <!-- four -->
-      <section id="four" class="wrapper style-alt fade-up">
-        <div class="inner">
-          <h2>My Interests</h2>
-          <p>
-            <b
-              ><i
-                >"Photography is the art of frozen time, the ability to store
-                emotion and feelings within a frame." <br />~ Meshack Otieno
-                ~</i
-              ></b
-            >
-          </p>
-          <div class="features">
-            <section>
-              <span class="icon solid major fa-camera"></span>
-              <h3>Photography</h3>
-              <p>
-                I love making memories with my camera and study photography to
-                make beautiful art clicks.
-              </p>
-              <ul class="actions">
-                <li>
-                  <a href="photography.html" target="_blank" class="button"
-                    >Explore my work</a
-                  >
-                </li>
-              </ul>
-            </section>
-          </div>
-        </div>
-      </section>
-
-      <!-- five -->
-      <section id="five" class="wrapper style3 fade-up">
-        <div class="inner">
-          <h2>Visit my blog</h2>
-          <p>Read what I think while enjoying a roller coaster ride...</p>
-
-          <ul class="actions">
-            <li>
-              <a href="https://jayathriranasinghe.blogspot.com/" class="button">Visit</a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- six -->
-      <section id="six" class="wrapper style1 fade-up">
-        <div class="inner">
-          <h2>Get in touch</h2>
-          <div class="split style1">
-            <section>
-              <ul class="contact">
-                <li>
-                  <h3>Address</h3>
-                  <span
-                    >44,<br />
-                    Batuwita,<br />
-                    Gonapola Junction.<br />
-                    Sri Lanka</span
-                  >
-                </li>
-                <li>
-                  <h3>Email</h3>
-                  <a href="#">jayathrimr@gmail.com</a>
-                </li>
-                <li>
-                  <h3>Phone</h3>
-                  <span>+(94) 71 5751 733</span>
-                </li>
-                <li>
-                  <h3>Social</h3>
-                  <ul class="icons">
-                    <li>
-                      <a
-                        href="https://twitter.com/jayathrimr"
-                        class="icon brands fa-twitter"
-                        ><span class="label">Twitter</span></a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="https://facebook.com/jayathriranasinghe"
-                        class="icon brands fa-facebook-f"
-                        ><span class="label">Facebook</span></a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="https://github.com/jayathriranasinghe"
-                        class="icon brands fa-github"
-                        ><span class="label">GitHub</span></a
-                      >
-                    </li>
-                    <!-- <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
-                    <li>
-                      <a
-                        href="https://www.linkedin.com/in/jayathri-ranasinghe-2171a9204/"
-                        class="icon brands fa-linkedin-in"
-                        ><span class="label">LinkedIn</span></a
-                      >
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </section>
-          </div>
-        </div>
-      </section>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-grad">View My Work</a>
+        <a href="#contact"  class="btn-ghost">Get in Touch</a>
+      </div>
     </div>
+  </section>
 
-    <!-- Footer -->
-    <footer id="footer" class="wrapper style1-alt">
-      <div class="inner">
-        <ul class="menu">
-          <li>&copy; jaya3Ranasinghe. All rights reserved.</li>
-        </ul>
+  <!-- ── Experience ─────────────────────────────── -->
+  <div class="section-band" id="experience">
+    <div class="page-section">
+      <div class="section-head reveal">
+        <h2>Industry Experience</h2>
+        <p>Places I've grown as an engineer</p>
       </div>
-    </footer>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
+      <div class="timeline">
+
+        <!-- Altrium -->
+        <div class="tl-item reveal">
+          <div class="tl-header">
+            <h3>Altrium &nbsp;·&nbsp; Colombo, Sri Lanka &nbsp;·&nbsp; Hybrid</h3>
+            <span class="tl-date">Sep 2024 – Present &nbsp;·&nbsp; 1 yr 9 mos</span>
+          </div>
+
+          <div style="margin-top:0.9rem;">
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.4rem;margin-bottom:0.4rem;">
+              <p class="tl-project" style="margin:0;">Software Engineer</p>
+              <span class="tl-date">Aug 2025 – Present</span>
+            </div>
+            <ul>
+              <li>Continued previous work including ownership of release processes and documentation</li>
+            </ul>
+          </div>
+
+          <div style="margin-top:0.9rem;">
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.4rem;margin-bottom:0.4rem;">
+              <p class="tl-project" style="margin:0;">Associate Software Engineer</p>
+              <span class="tl-date">Sep 2024 – Jul 2025</span>
+            </div>
+            <ul>
+              <li>Contributed to a USA-based subscription management product (Aria Systems), collaborating with cross-functional teams across different time zones</li>
+              <li>Designed and implemented complex features on both frontend and backend, ensuring scalability and performance</li>
+              <li>Debugged and enhanced existing features to improve performance and maintainability</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Job 1 -->
+        <div class="tl-item reveal">
+          <div class="tl-header">
+            <h3>Software Engineering Intern — ML / AI &nbsp;·&nbsp; Unicorn-Solutions (Pvt) Ltd</h3>
+            <span class="tl-date">March 2024 – Present</span>
+          </div>
+
+          <p class="tl-project">Machine Learning Project</p>
+          <ul>
+            <li>Data preprocessing: feature engineering &amp; encoding</li>
+            <li>Training models using traditional ML approaches</li>
+            <li>Fine-tuning and model evaluation</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Scikit-learn</span>
+            <span class="tag">Git</span>
+            <span class="tag">BitBucket</span>
+            <span class="tag">JIRA</span>
+            <span class="tag">Confluence</span>
+          </div>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="tl-item reveal">
+          <div class="tl-header">
+            <h3>Software Engineering Intern &nbsp;·&nbsp; Unicorn-Solutions (Pvt) Ltd</h3>
+            <span class="tl-date">July 2023 – Dec 2023</span>
+          </div>
+
+          <p class="tl-project">QuickIn — Human Resource Management System</p>
+          <ul>
+            <li>Backend bug-fixes and developer testing for first production release</li>
+            <li>Fully developed the Admin Panel frontend</li>
+            <li>Azure dev-environment releases</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">React.js</span>
+            <span class="tag">Redux.js</span>
+            <span class="tag">.NET (Minimal API)</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">Azure</span>
+          </div>
+
+          <p class="tl-project" style="margin-top:1rem;">Machine Learning Project</p>
+          <ul>
+            <li>Data preprocessing, model training, fine-tuning &amp; evaluation</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Git</span>
+            <span class="tag">BitBucket</span>
+            <span class="tag">JIRA</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Projects ───────────────────────────────── -->
+  <div id="projects">
+    <div class="page-section">
+
+      <!-- Ongoing -->
+      <div class="section-head reveal">
+        <h2>My Projects</h2>
+        <p>A collection of things I've built and am building</p>
+      </div>
+
+      <h3 class="sub-heading reveal">
+        <i class="fas fa-cog fa-spin" style="color:var(--purple);font-size:0.9em;"></i>
+        Ongoing Projects
+      </h3>
+
+      <div class="cards-grid">
+
+        <div class="proj-card reveal">
+          <div class="proj-card-icon"><i class="fas fa-star-and-crescent"></i></div>
+          <h3>Destiny — AI Vedic Astrology App</h3>
+          <p>
+            Mobile app that computes a personalised Jyotish birth chart from user
+            birth details and uses an LLM to generate predictions across 6 life
+            categories: financial, career, relationships, family, education &amp; health.
+          </p>
+          <div class="tags">
+            <span class="tag">React Native</span>
+            <span class="tag">Expo</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">Groq / LLM</span>
+            <span class="tag">Kerykeion</span>
+            <span class="tag">Zustand</span>
+            <span class="tag">Individual</span>
+          </div>
+        </div>
+
+        <div class="proj-card reveal">
+          <div class="proj-card-icon"><i class="fas fa-users"></i></div>
+          <h3>System for Social Service Association</h3>
+          <p>
+            Welfare management system providing Financial Management, Inventory
+            Management and User Management for an area association that supports
+            member families.
+          </p>
+          <div class="tags">
+            <span class="tag">React (TypeScript)</span>
+            <span class="tag">Redux-Saga</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Individual</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Completed -->
+      <h3 class="sub-heading reveal">Completed Projects</h3>
+
+      <div class="cards-grid">
+
+        <div class="proj-card reveal">
+          <div class="proj-card-icon"><i class="fas fa-dna"></i></div>
+          <h3>Long-Reads Binning &amp; Classification</h3>
+          <p>
+            Research project studying DNA domains — how binning and classifications
+            are performed using existing Python tools and literature.
+          </p>
+          <div class="tags">
+            <span class="tag">Bioinformatics</span>
+            <span class="tag">Python</span>
+            <span class="tag">Group</span>
+          </div>
+          <a
+            href="https://cepdnaclk.github.io/e18-4yp-Multi-Kingdom-Binning-of-Long-Read-Metagenomes/"
+            target="_blank"
+            class="proj-card-link"
+          >Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="proj-card reveal">
+          <div class="proj-card-icon"><i class="fas fa-egg"></i></div>
+          <h3>ML for Analyzing Egg Hatching</h3>
+          <p>
+            Machine Learning model to predict the number of hatching eggs before
+            incubation, and methods to reduce rejected eggs to improve farm profit.
+          </p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Google Colab</span>
+            <span class="tag">React.js</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">Group</span>
+          </div>
+          <a
+            href="https://github.com/cepdnaclk/e18-6sp-ML-for-Analyzing-Egg-Hatching"
+            target="_blank"
+            class="proj-card-link"
+          >GitHub <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="proj-card reveal">
+          <div class="proj-card-icon"><i class="fas fa-heartbeat"></i></div>
+          <h3>Health Watch with Emergency Notifications</h3>
+          <p>
+            Full software–hardware system: an IoT wrist-worn device that monitors
+            health metrics and dispatches emergency notifications in real time.
+          </p>
+          <div class="tags">
+            <span class="tag">Flutter / Dart</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Azure</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">Arduino</span>
+            <span class="tag">Group</span>
+          </div>
+          <a href="healthwatch.html" target="_blank" class="proj-card-link">
+            Read More <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="proj-card reveal">
+          <div class="proj-card-icon"><i class="fas fa-envelope-open-text"></i></div>
+          <h3>Automated Notification System for Examinations</h3>
+          <p>
+            Sends automated email and Discord reminders to lecturers assigned to
+            exam duties, with configurable lead-time before due dates.
+          </p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Google Cloud</span>
+            <span class="tag">Gmail API</span>
+            <span class="tag">Discord</span>
+            <span class="tag">Group</span>
+          </div>
+          <a
+            href="https://cepdnaclk.github.io/e18-co227-Automated-Notification-System-for-Examinations/"
+            target="_blank"
+            class="proj-card-link"
+          >Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="proj-card reveal">
+          <div class="proj-card-icon"><i class="fab fa-bluetooth-b"></i></div>
+          <h3>Bluetooth Chat Application</h3>
+          <p>
+            Android application for sending and receiving text messages with
+            nearby devices over Bluetooth — no internet required.
+          </p>
+          <div class="tags">
+            <span class="tag">Java</span>
+            <span class="tag">Android Studio</span>
+            <span class="tag">Group</span>
+          </div>
+          <a
+            href="https://github.com/NethmiRanasinghe/CO225-project-group10"
+            target="_blank"
+            class="proj-card-link"
+          >GitHub <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+      </div>
+
+      <!-- Individual -->
+      <h3 class="sub-heading reveal">Individual Projects</h3>
+
+      <div class="cards-grid">
+
+        <div class="proj-card reveal">
+          <div class="proj-card-icon"><i class="fas fa-file-signature"></i></div>
+          <h3>Invitation Namer</h3>
+          <p>
+            Desktop tool to auto-print names on invitation templates from an Excel
+            guest list. Set up your design once — generate personalised invitations
+            in bulk.
+          </p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">MS Excel</span>
+          </div>
+          <a
+            href="https://github.com/JayathriRanasinghe/Invitation_Namer"
+            target="_blank"
+            class="proj-card-link"
+          >GitHub <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="proj-card reveal">
+          <div class="proj-card-icon"><i class="fas fa-check-square"></i></div>
+          <h3>ToDo App</h3>
+          <p>
+            Simple offline Android application to manage daily tasks and
+            deadlines with reminders. All data stored locally on-device.
+          </p>
+          <div class="tags">
+            <span class="tag">Flutter</span>
+          </div>
+          <a
+            href="https://github.com/JayathriRanasinghe/ToDo-Application"
+            target="_blank"
+            class="proj-card-link"
+          >GitHub <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── Interests ──────────────────────────────── -->
+  <div class="section-band" id="interests">
+    <div class="page-section">
+      <div class="section-head reveal">
+        <h2>My Interests</h2>
+      </div>
+
+      <div class="interest-card reveal">
+        <div class="interest-icon-box">
+          <i class="fas fa-camera"></i>
+        </div>
+        <div class="interest-body">
+          <h3>Photography</h3>
+          <blockquote>
+            "Photography is the art of frozen time, the ability to store emotion
+            and feelings within a frame." &mdash; Meshack Otieno
+          </blockquote>
+          <p style="font-size:0.9rem; margin-bottom:1.1rem;">
+            I love making memories with my camera and continuously study
+            photography to create beautiful, meaningful captures.
+          </p>
+          <a href="photography.html" target="_blank" class="btn-ghost" style="display:inline-block;">
+            Explore My Work
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── Blog ───────────────────────────────────── -->
+  <div id="blog">
+    <div class="page-section" style="text-align:center;">
+      <div class="section-head reveal">
+        <h2>My Blog</h2>
+      </div>
+
+      <div class="blog-card reveal">
+        <div class="blog-icon"><i class="fas fa-pen-nib"></i></div>
+        <h3>Visit My Blog</h3>
+        <p>Read what I think while enjoying a roller coaster ride...</p>
+        <a
+          href="https://jayathriranasinghe.blogspot.com/"
+          target="_blank"
+          class="btn-grad"
+          style="display:inline-block;"
+        >Visit Blog</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Contact ────────────────────────────────── -->
+  <div class="section-band" id="contact">
+    <div class="page-section">
+      <div class="section-head reveal">
+        <h2>Get in Touch</h2>
+        <p>Feel free to reach out — I'm always happy to connect</p>
+      </div>
+
+      <div class="contact-grid reveal">
+        <div class="contact-card">
+          <h4>Location</h4>
+          <p>44, Batuwita, Gonapola Junction,<br>Sri Lanka</p>
+        </div>
+        <div class="contact-card">
+          <h4>Email</h4>
+          <a href="mailto:jayathrimr@gmail.com">jayathrimr@gmail.com</a>
+        </div>
+        <div class="contact-card">
+          <h4>Phone</h4>
+          <p>+(94) 71 5751 733</p>
+        </div>
+      </div>
+
+      <div class="social-row reveal">
+        <a href="https://twitter.com/jayathrimr" target="_blank" class="social-btn" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://facebook.com/jayathriranasinghe" target="_blank" class="social-btn" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://github.com/jayathriranasinghe" target="_blank" class="social-btn" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/jayathri-ranasinghe-2171a9204/" target="_blank" class="social-btn" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── Footer ─────────────────────────────────── -->
+  <footer id="footer">
+    &copy; Jayathri Ranasinghe. All rights reserved.
+  </footer>
+
+  <!-- ── Scripts ────────────────────────────────── -->
+  <script>
+    /* Mobile nav toggle */
+    const hamburger = document.getElementById('hamburger');
+    const navMobile = document.getElementById('nav-mobile');
+    hamburger.addEventListener('click', () => navMobile.classList.toggle('open'));
+    function closeMobile() { navMobile.classList.remove('open'); }
+
+    /* Scroll reveal */
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
+
+    /* Canvas particles */
+    (function () {
+      const canvas = document.getElementById('particles-canvas');
+      const ctx = canvas.getContext('2d');
+      let W, H, particles = [];
+
+      function resize() {
+        W = canvas.width  = window.innerWidth;
+        H = canvas.height = window.innerHeight;
+      }
+      window.addEventListener('resize', resize);
+      resize();
+
+      function mkParticle() {
+        return {
+          x: Math.random() * W,
+          y: H + 10,
+          r: Math.random() * 1.5 + 0.5,
+          speed: Math.random() * 0.6 + 0.2,
+          dx: (Math.random() - 0.5) * 0.4,
+          opacity: Math.random() * 0.5 + 0.2,
+          color: Math.random() > 0.5 ? '#915eff' : '#00d4ff'
+        };
+      }
+
+      for (let i = 0; i < 60; i++) {
+        const p = mkParticle();
+        p.y = Math.random() * H;
+        particles.push(p);
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, W, H);
+        particles.forEach((p, i) => {
+          p.y -= p.speed;
+          p.x += p.dx;
+          if (p.y < -10) particles[i] = mkParticle();
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = p.color;
+          ctx.globalAlpha = p.opacity;
+          ctx.fill();
+        });
+        ctx.globalAlpha = 1;
+        requestAnimationFrame(draw);
+      }
+      draw();
+    })();
+  </script>
+
+</body>
 </html>
