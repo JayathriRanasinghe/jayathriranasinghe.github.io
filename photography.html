@@ -453,9 +453,10 @@
 
     /* Scroll reveal */
     const revEls = document.querySelectorAll('.reveal');
-    new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.1 }).observe(...(revEls.length ? revEls : [document.body]));
+    const io2 = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io2.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    revEls.forEach(el => io2.observe(el));
   </script>
 
 </body>
